@@ -1,0 +1,4 @@
+duckdb
+yfinance
+pandas
+dbt-duckdb
