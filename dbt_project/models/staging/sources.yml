@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: finance_db       # internal alias
+    database: finance      # DuckDB database name
+    schema: main           # schema in DuckDB
+    tables:
+      - name: raw_stock_data
+        description: "Raw daily stock data from Yahoo Finance via Python script."

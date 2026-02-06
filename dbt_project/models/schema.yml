@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_stock_prices
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: close_price
+        tests:
+          - not_null
+
+  - name: mart_momentum_indicators
+    columns:
+      - name: ticker_symbol
+        tests:
+          - not_null
+      - name: momentum_signal
+        tests:
+          - accepted_values:
+              values: ['BULLISH', 'BEARISH', 'NEUTRAL']
